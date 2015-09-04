@@ -14,6 +14,8 @@
 		2A0C0F2D1B9A476800B5C66A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A0C0F2B1B9A476800B5C66A /* LaunchScreen.storyboard */; };
 		2A0C0F381B9A476800B5C66A /* BeastListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C0F371B9A476800B5C66A /* BeastListTests.swift */; };
 		2A0C0F431B9A476800B5C66A /* BeastListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C0F421B9A476800B5C66A /* BeastListUITests.swift */; };
+		2A0C0F511B9A51BB00B5C66A /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C0F501B9A51BB00B5C66A /* Database.swift */; settings = {ASSET_TAGS = (); }; };
+		2A0C0F531B9A586B00B5C66A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0C0F521B9A586B00B5C66A /* Task.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2A0C0F3E1B9A476800B5C66A /* BeastListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeastListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0C0F421B9A476800B5C66A /* BeastListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastListUITests.swift; sourceTree = "<group>"; };
 		2A0C0F441B9A476800B5C66A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A0C0F501B9A51BB00B5C66A /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		2A0C0F521B9A586B00B5C66A /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				2A0C0F291B9A476800B5C66A /* Assets.xcassets */,
 				2A0C0F2B1B9A476800B5C66A /* LaunchScreen.storyboard */,
 				2A0C0F2E1B9A476800B5C66A /* Info.plist */,
+				2A0C0F501B9A51BB00B5C66A /* Database.swift */,
+				2A0C0F521B9A586B00B5C66A /* Task.swift */,
 			);
 			path = BeastList;
 			sourceTree = "<group>";
@@ -255,6 +261,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0C0F531B9A586B00B5C66A /* Task.swift in Sources */,
+				2A0C0F511B9A51BB00B5C66A /* Database.swift in Sources */,
 				2A0C0F251B9A476800B5C66A /* ViewController.swift in Sources */,
 				2A0C0F231B9A476800B5C66A /* AppDelegate.swift in Sources */,
 			);

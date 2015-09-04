@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeastList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,55 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0pw-kf-YUj">
+                                <rect key="frame" x="20" y="58" width="560" height="534"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyCell" id="hOf-ji-1uc" userLabel="MyCell">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hOf-ji-1uc" id="jTm-Ah-urB">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLG-Bm-gk9">
+                                <rect key="frame" x="541" y="20" width="39" height="30"/>
+                                <state key="normal" title="Beast"/>
+                                <connections>
+                                    <action selector="insertButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HOJ-Cy-Av8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3Z-gy-tB3">
+                                <rect key="frame" x="20" y="20" width="510" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fLG-Bm-gk9" firstAttribute="leading" secondItem="s3Z-gy-tB3" secondAttribute="trailing" constant="11" id="9cv-P4-yvA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="s3Z-gy-tB3" secondAttribute="leading" id="Wac-2Y-Qcf"/>
+                            <constraint firstItem="0pw-kf-YUj" firstAttribute="top" secondItem="s3Z-gy-tB3" secondAttribute="bottom" constant="8" symbolic="YES" id="Yvf-zB-zSW"/>
+                            <constraint firstItem="0pw-kf-YUj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ZKa-Xw-Ggg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fLG-Bm-gk9" secondAttribute="trailing" id="dad-WU-mGV"/>
+                            <constraint firstItem="0pw-kf-YUj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jwN-SJ-CRG"/>
+                            <constraint firstItem="fLG-Bm-gk9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="nWS-Ig-slr"/>
+                            <constraint firstItem="s3Z-gy-tB3" firstAttribute="centerY" secondItem="fLG-Bm-gk9" secondAttribute="centerY" id="vcl-Gk-QUJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0pw-kf-YUj" secondAttribute="bottom" constant="8" symbolic="YES" id="xF0-k7-oQr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="insertTaskField" destination="s3Z-gy-tB3" id="X6a-IX-u0l"/>
+                        <outlet property="tableView" destination="0pw-kf-YUj" id="BJC-Fe-d30"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="462"/>
         </scene>
     </scenes>
 </document>
